@@ -222,3 +222,20 @@ A neatly organized card layout for incoming patient messages, including contact 
 > The **Admin Interface** is crafted for efficiency and simplicity, ensuring that even non-technical hospital staff can manage operations without hassle.
 
 
+## 🤝 Contributors
+
+Contributions are welcome! If you would like to contribute, please follow these steps:
+
+1. **Fork** the repository. 🍴  
+2. **Create a new branch** for your feature or bug fix. 🌿  
+3. **Make your changes** and test them thoroughly. 🧪  
+4. **Submit a pull request** with a detailed description of your changes. ✅  
+
+> 🛠️ *Note: Contributors are encouraged to add new features, such as an enhanced doctor dashboard view, to further improve the administration of doctor profiles.*
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License**.  
+For more details, see the [LICENSE](./LICENSE) file.
