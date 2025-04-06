@@ -70,4 +70,10 @@ Hospital Management System is a comprehensive web-based application designed to 
    ```bash
    git clone https://github.com/yourusername/hospital-management-system.git
    cd hospital-management-system
-  ```
+
+## Backend Setup
+
+1. **Navigate to the backend folder:**
+
+   ```bash
+   cd backend
