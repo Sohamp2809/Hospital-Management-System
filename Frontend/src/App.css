@@ -1,0 +1,1029 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  background: #e5e5e5;
+}
+.btn {
+  padding: 7px 20px;
+  border-radius: 12px;
+  border: none;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.white-btn {
+  background: #fff;
+  color: #111;
+}
+.purple-btn {
+  background: #9083d5;
+  color: #fff;
+}
+p,
+span,
+a {
+  font-size: 20px;
+}
+h1 {
+  font-size: 36px;
+  font-weight: 900;
+}
+h1 {
+  font-size: 36px;
+  font-weight: 900;
+}
+h2 {
+  font-size: 32px;
+  font-weight: 900;
+}
+h3 {
+  font-size: 28px;
+  font-weight: 900;
+}
+h4 {
+  font-size: 24px;
+  font-weight: 900;
+}
+h5,
+h6 {
+  font-size: 24px;
+  font-weight: 700;
+}
+@media (max-width: 1186px) {
+  h1 {
+    font-size: 32px;
+    font-weight: 900;
+  }
+  h2 {
+    font-size: 30px;
+    font-weight: 900;
+  }
+}
+.container {
+  padding: 0 100px;
+}
+@media (max-width: 700px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+/* Overall Hero Component Styling */
+.Hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 50px;
+  overflow: hidden; /* Prevent scrollbars */
+  background-color: #001a33; /* Dark blue background */
+  color: white; /* Default font color */
+  position: relative; /* For positioning child elements */
+  min-height: 100vh;
+}
+
+/* Gradient Text Styling for Title */
+.Hero .gradient-text {
+  font-size: 3rem; /* Adjust for prominence */
+  font-weight: 900;
+  line-height: 1.2;
+  background: linear-gradient(90deg, #f97316, #ec4899); /* Orange to pink gradient */
+  -webkit-background-clip: text; /* Clip background to text */
+  -webkit-text-fill-color: transparent; /* Make text transparent to show gradient */
+  margin-bottom: 20px;
+}
+
+/* Paragraph Text Styling */
+.Hero .banner p {
+  font-size: 1.2rem;
+  color: #cfd8dc; /* Light grey for subtle contrast */
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+/* First Banner (Text Section) */
+.Hero .banner:first-child {
+  max-width: 50%; /* Restrict width of text area */
+}
+
+/* Second Banner (Image Section) */
+.Hero .banner:last-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Vector Image Styling */
+.Hero .vector-image {
+  position: absolute;
+  top: 20px; /* Adjust placement */
+  right: 20px; /* Adjust placement */
+  z-index: 1;
+}
+
+.Hero .vector-image img {
+  max-width: 120px; /* Adjust size */
+  height: auto;
+  opacity: 0.7; /* Slight transparency for background element */
+}
+
+/* Animated Image Styling */
+.Hero .animated-image {
+  max-width: 80%; /* Larger animated image */
+  height: auto;
+  animation: moveUpDown 2s infinite alternate ease-in-out; /* Smooth up-down animation */
+  z-index: 2; /* Above vector image */
+}
+
+/* Keyframes for Animation */
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Body Background and Typography */
+body {
+  background-color: #001a33; /* Dark blue background */
+  color: white;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  font-family: "Montserrat", sans-serif; /* Modern, clean font */
+}
+/* Large Devices */
+@media (max-width: 1186px) {
+  .Hero .banner:first-child {
+    max-width: 60%;
+  }
+  .Hero .banner span {
+    right: -400px;
+  }
+  .Hero .gradient-text {
+    font-size: 2.5rem;
+  }
+}
+
+/* Medium Devices */
+@media (max-width: 1085px) {
+  .Hero .banner span {
+    right: -480px;
+    top: -315px;
+  }
+  .Hero .gradient-text {
+    font-size: 2.2rem;
+  }
+}
+
+/* Small Devices */
+@media (max-width: 925px) {
+  .Hero {
+    flex-direction: column; /* Stack text and image vertically */
+    text-align: center; /* Center text */
+    padding: 30px;
+  }
+  .Hero .banner:last-child {
+    margin-top: 20px; /* Add space between text and image */
+  }
+}
+
+/* Extra Small Devices */
+@media (max-width: 700px) {
+  .Hero {
+    padding-bottom: 40px;
+  }
+  .Hero .vector-image {
+    display: none; /* Hide vector image for smaller screens */
+  }
+  .Hero .animated-image {
+    max-width: 90%;
+    margin-top: 15px;
+  }
+}
+.form-component {
+  padding-top: 40px;
+  padding-bottom: 60px;
+}
+.form-component h2 {
+  color: gray;
+  letter-spacing: 4px;
+  margin-bottom: 30px;
+}
+.form-component h4 {
+  color: gray;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.form-component p {
+  max-width: 750px;
+  color: gray;
+  margin-bottom: 20px;
+}
+.form-component form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.form-component form div {
+  display: flex;
+  gap: 30px;
+}
+.form-component form input,
+.form-component form select,
+.form-component form textarea {
+  flex: 1;
+  font-size: 24px;
+  padding: 10px 10px 10px 40px;
+  border-radius: 7px;
+  border: 1px solid gray;
+}
+.form-component button {
+  padding: 10px 35px;
+  color: #fff;
+  font-weight: 700;
+  width: fit-content;
+  border: none;
+  border-radius: 8px;
+  font-size: 24px;
+  margin-bottom: 30px;
+  background: linear-gradient(140deg, #9083d5, #271776ca);
+}
+.form-component .wrapper {
+  display: flex;
+  gap: 50px;
+}
+.form-component .wrapper .banner {
+  flex: 1;
+}
+.form-component .wrapper .banner:last-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form-component .wrapper .banner:last-child img {
+  max-width: 450px;
+}
+/* Styling for Register Form Component */
+.container.form-component.register-form {
+  background-color: #0a2540; /* Slightly lighter blue */
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+  padding: 40px 50px; /* Spacing for the container */
+  max-width: 700px; /* Limit the width */
+  margin: 50px auto; /* Center the container horizontally */
+  color: #ffffff;
+}
+
+/* Title Styling */
+.container.form-component.register-form h2 {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #f97316; /* Orange for title visibility */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Subtitle Styling */
+.container.form-component.register-form p {
+  font-size: 1rem;
+  color: #cfd8dc; /* Light grey for text */
+  text-align: center;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+/* Form Styling */
+.container.form-component.register-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between form rows */
+}
+
+/* Input Group Styling */
+.container.form-component.register-form form div {
+  display: flex;
+  gap: 15px; /* Space between inputs in the same row */
+}
+
+.container.form-component.register-form form input,
+.container.form-component.register-form form select {
+  flex: 1;
+  padding: 12px 15px;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  border: 1px solid #cfd8dc;
+  background-color: #001a33; /* Dark input background */
+  color: white; /* White text for inputs */
+}
+
+.container.form-component.register-form form input::placeholder,
+.container.form-component.register-form form select {
+  color: #cfd8dc; /* Placeholder text color */
+}
+
+/* Select Styling */
+.container.form-component.register-form form select {
+  appearance: none;
+  background-color: #001a33; /* Match input background */
+}
+
+/* Button Styling */
+.container.form-component.register-form button {
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #f97316, #ec4899); /* Gradient button */
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, background 0.3s;
+}
+
+.container.form-component.register-form button:hover {
+  transform: scale(1.05); /* Slight enlarge on hover */
+  background: linear-gradient(90deg, #ec4899, #f97316); /* Reverse gradient */
+}
+
+/* Footer Section */
+.container.form-component.register-form .form-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.container.form-component.register-form .form-footer p {
+  font-size: 0.95rem;
+  color: #cfd8dc; /* Light grey text for the footer */
+  margin: 0;
+}
+
+.container.form-component.register-form .form-footer a {
+  color: #f97316; /* Orange for link visibility */
+  text-decoration: underline;
+  font-weight: 600;
+  transition: color 0.3s ease-in-out;
+}
+
+.container.form-component.register-form .form-footer a:hover {
+  color: #ec4899; /* Pink on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .container.form-component.register-form {
+    padding: 30px 20px; /* Reduce padding for smaller screens */
+  }
+
+  .container.form-component.register-form h2 {
+    font-size: 1.8rem;
+  }
+
+  .container.form-component.register-form form div {
+    flex-direction: column; /* Stack inputs vertically */
+  }
+
+  .container.form-component.register-form button {
+    font-size: 0.9rem;
+  }
+}
+
+/* Overall Styling for Login Page */
+body.login-page {
+  background-color: #001a33; /* Dark blue background */
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Sign-In Box Styling */
+.signin-box {
+  background-color: #0a2540; /* Slightly lighter blue */
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow for better depth */
+  padding: 50px 60px; /* Increased padding for a spacious look */
+  max-width: 600px; /* Larger box width */
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center all content inside the box */
+}
+
+/* Title Styling */
+.signin-box h1 {
+  font-size: 2.5rem; /* Larger font size for the title */
+  font-weight: 900;
+  color: #f97316; /* Orange for visibility */
+  margin-bottom: 20px;
+}
+
+/* Subtitle Styling */
+.signin-box p.subtitle {
+  font-size: 1rem;
+  color: #cfd8dc; /* Light grey for readability */
+  margin-bottom: 30px;
+  line-height: 1.8; /* Increased line spacing for better readability */
+}
+
+/* Input Fields */
+.signin-box input {
+  width: 100%;
+  padding: 15px; /* Larger padding for bigger inputs */
+  font-size: 1rem;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1px solid #cfd8dc;
+  background-color: #001a33; /* Dark background for inputs */
+  color: white;
+}
+
+/* Placeholder Color */
+.signin-box input::placeholder {
+  color: #cfd8dc;
+  font-size: 0.95rem;
+}
+
+/* Sign-In Button */
+.signin-box button {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.2rem; /* Bigger font for the button */
+  font-weight: 700;
+  background: linear-gradient(90deg, #f97316, #ec4899); /* Gradient background */
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.signin-box button:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  background: linear-gradient(90deg, #ec4899, #f97316); /* Reverse gradient on hover */
+}
+
+/* Register Now Section */
+.register-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* Space between "New Here?" and the button */
+  margin-top: 20px;
+}
+
+.register-section p {
+  font-size: 1rem;
+  color: #cfd8dc; /* Light grey for "New Here?" text */
+}
+
+.register-section a {
+  color: #f97316; /* Orange for visibility */
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.3s ease-in-out;
+}
+
+.register-section a:hover {
+  color: #ec4899; /* Pink on hover for better contrast */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .signin-box {
+    padding: 30px;
+    max-width: 90%; /* Adjust to fit smaller screens */
+  }
+
+  .signin-box h1 {
+    font-size: 2rem;
+  }
+
+  .signin-box input {
+    font-size: 0.95rem;
+  }
+
+  .signin-box button {
+    font-size: 1rem;
+  }
+
+  .register-section p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 1110px) {
+  .appointment-form form div:nth-child(4) {
+    flex-direction: column;
+  }
+  .appointment-form form div:nth-child(5) {
+    flex-direction: column;
+  }
+}
+@media (max-width: 888px) {
+  .form-component {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .form-component form div {
+    flex-direction: column;
+  }
+}
+@media (max-width: 667px) {
+  .form-component form input,
+  .form-component form select,
+  .form-component form textarea {
+    font-size: 20px;
+    padding: 10px;
+  }
+}
+
+.Biography {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 50px;
+  background-color: #001a33; /* Dark blue background */
+  color: white; /* White text */
+  min-height: 100vh;
+}
+
+.Biography .banner:first-child {
+  flex: 1; /* Equal space for the image and text */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Biography .banner:first-child img {
+  max-width: 100%; /* Ensure the image is responsive */
+  height: auto;
+  border-radius: 10px; /* Optional: rounded corners for the image */
+}
+
+.Biography .banner:last-child {
+  flex: 2; /* Allow the text to take more space */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-left: 20px;
+}
+
+.Biography .banner:last-child p:first-child {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #f97316; /* Optional: Add an accent color for "BioGraphy" */
+}
+
+.Biography .banner:last-child h3 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 15px;
+  line-height: 1.3;
+  color: white; /* White heading text */
+}
+
+.Biography .banner:last-child p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #cfd8dc; /* Light grey text for better readability */
+}
+
+@media (max-width: 768px) {
+  .Biography {
+    flex-direction: column; /* Stack image and text on smaller screens */
+    text-align: center;
+    padding: 20px;
+  }
+
+  .Biography .banner:first-child {
+    margin-bottom: 20px;
+  }
+
+  .Biography .banner:last-child {
+    padding-left: 0;
+  }
+}
+.message-form {
+  padding: 50px 100px; /* Adjust padding */
+  background-color: #001a33; /* Dark blue background to match theme */
+  color: white; /* White text for form fields */
+  border-radius: 10px; /* Rounded corners for form container */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.message-form h2 {
+  text-align: center;
+  color: #f97316; /* Orange text for the heading */
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.message-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between fields */
+  width: 100%;
+  max-width: 800px; /* Restrict width */
+  margin: 0 auto; /* Center the form */
+}
+
+.message-form form div {
+  display: flex;
+  gap: 20px; /* Space between input fields in the same row */
+}
+
+.message-form form input,
+.message-form form textarea {
+  flex: 1;
+  font-size: 1rem;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 1px solid #cfd8dc; /* Light gray border */
+  background-color: #0a2540; /* Slightly lighter blue for fields */
+  color: white; /* White text inside input fields */
+}
+
+.message-form form textarea {
+  min-height: 150px; /* Height for the message box */
+}
+
+.message-form button {
+  padding: 10px 35px;
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+  background: linear-gradient(140deg, #f97316, #ec4899); /* Gradient background */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  align-self: center; /* Center the button */
+}
+
+.message-form button:hover {
+  background: linear-gradient(140deg, #ec4899, #f97316); /* Reverse gradient on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+@media (max-width: 768px) {
+  .message-form {
+    padding: 30px 20px; /* Reduce padding for smaller screens */
+  }
+
+  .message-form h2 {
+    font-size: 1.5rem; /* Smaller text for heading */
+  }
+
+  .message-form form div {
+    flex-direction: column; /* Stack fields vertically */
+  }
+
+  .message-form button {
+    width: 100%; /* Full width for smaller screens */
+  }
+}
+
+footer {
+  padding-bottom: 30px !important;
+}
+footer hr {
+  margin-bottom: 30px;
+}
+footer .content {
+  display: flex;
+  gap: 20px;
+}
+footer .content div {
+  flex: 1;
+}
+footer .content div:nth-child(3) {
+  flex: 2;
+}
+footer .content div h4 {
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+footer .content div ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+footer .content div ul a {
+  color: gray;
+  text-decoration: none;
+}
+footer .content div ul a:hover {
+  color: #8570ed;
+  transition: 0.3s;
+}
+footer .content div ul li span {
+  color: gray;
+}
+footer .content div ul li span:first-child {
+  width: 150px;
+  display: inline-block;
+}
+
+footer .content div:last-child div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+footer .content div:last-child div svg {
+  font-size: 24px;
+}
+@media (max-width: 1135px) {
+  footer .content {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  footer .content div,
+  footer .content div:nth-child(3) {
+    flex: none;
+    width: 340px;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 900px) {
+  footer {
+    padding-bottom: 0 !important;
+  }
+  footer .content div,
+  footer .content div:nth-child(3) {
+    width: 100%;
+  }
+}
+@media (max-width: 390px) {
+  footer .content div:nth-child(3) ul li {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.departments {
+  padding: 50px 100px; /* Add spacing around the section */
+  background-color: #0a2540; /* Blue theme background similar to Revature */
+  color: white; /* White text for better contrast */
+  text-align: center;
+}
+
+.departments h2 {
+  color: #ffffff; /* White text for the section title */
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 30px;
+  text-transform: uppercase; /* Make the title bold and professional */
+}
+
+.card {
+  position: relative;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  margin: 20px;
+  min-height: 300px;
+  overflow: hidden;
+  background-color: #0a2540; /* Blue background */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7); /* Slightly darken the image for text visibility */
+}
+
+.card .depart-name {
+  position: relative;
+  z-index: 1;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for contrast */
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.departments-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px; /* Space between cards */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .departments {
+    padding: 30px 20px;
+  }
+
+  .card {
+    flex: 1 1 100%; /* Stack cards vertically on smaller screens */
+    margin: 10px 0;
+  }
+
+  .departments h2 {
+    font-size: 2rem;
+  }
+}
+
+
+/**********************************************************************************************************************/
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background: linear-gradient(90deg, #001a33, #0a2540); /* Gradient background */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Navbar Styling */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background: linear-gradient(90deg, #001a33, #0a2540); /* Gradient background */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo Styling */
+nav .logo {
+  font-size: 1.8rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #f97316, #ec4899); /* Gradient matching login button */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+  letter-spacing: 2px;
+  display: inline-block;
+  transition: color 0.3s ease-in-out;
+}
+
+nav .logo:hover {
+  transform: scale(1.1); /* Enlarge slightly on hover */
+  background: linear-gradient(90deg, #ec4899, #f97316); /* Reverse gradient on hover */
+}
+
+/* Navigation Links */
+nav .navLinks {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+nav .navLinks .links {
+  display: flex;
+  gap: 25px;
+}
+
+nav .navLinks .links a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: #ffffff;
+  font-weight: 600;
+  text-transform: uppercase;
+  position: relative;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+nav .navLinks .links a:hover {
+  transform: scale(1.1); /* Enlarge icons on hover */
+  color: #f97316; /* Orange color on hover */
+}
+
+/* Button Styling */
+nav .btn {
+  padding: 8px 20px;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  border-radius: 20px;
+  border: none;
+  background: linear-gradient(90deg, #f97316, #ec4899); /* Gradient */
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+nav .btn:hover {
+  background: linear-gradient(90deg, #ec4899, #f97316); /* Reverse gradient on hover */
+  transform: scale(1.1);
+}
+
+/* Hamburger Menu */
+nav .hamburger {
+  display: none;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+nav .hamburger:hover {
+  transform: rotate(90deg);
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  nav {
+    padding: 15px 20px;
+  }
+
+  nav .navLinks {
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: #001a33;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+  }
+
+  nav .navLinks.showmenu {
+    max-height: 300px;
+  }
+
+  nav .navLinks .links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 10px 20px;
+    width: 100%;
+  }
+
+  nav .btn {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  nav .hamburger {
+    display: block;
+  }
+}
+
+input[type="date"]:before {
+  content: attr(placeholder);
+  color: #444;
+  margin-right: 0.5em;
+}
+input[type="time"]:before {
+  content: attr(placeholder);
+  color: #444;
+  margin-right: 0.5em;
+}
+.logo-img{
+  width: 150px;
+}
+footer {
+  background-color: #001a33;
+  color: white;
+  text-align: center;
+  padding: 20px 0; /* Add padding for spacing */
+  font-size: 14px;
+}
+
+footer .copyright {
+  font-size: 14px;
+  color: #cfd8dc;
+}

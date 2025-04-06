@@ -1,0 +1,53 @@
+# ------------------------------
+# Node Modules
+# ------------------------------
+node_modules/
+
+# ------------------------------
+# Logs
+# ------------------------------
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ------------------------------
+# Environment/Config Files
+# ------------------------------
+.env
+.env.*
+.env.local
+config.env
+config/config.env
+
+# ------------------------------
+# Build/Coverage Outputs
+# ------------------------------
+dist/
+build/
+coverage/
+
+# ------------------------------
+# OS-Specific Files
+# ------------------------------
+.DS_Store
+Thumbs.db
+
+# ------------------------------
+# IDE/Editor Settings
+# ------------------------------
+.vscode/
+.idea/
+
+# ------------------------------
+# ESLint Cache
+# ------------------------------
+.eslintcache
+
+# ------------------------------
+# Temporary Files
+# ------------------------------
+*.tmp
+*.swp

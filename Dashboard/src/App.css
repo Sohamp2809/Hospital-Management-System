@@ -1,0 +1,698 @@
+/* General styles */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background: #f4f6f9; /* Light gray background */
+  color: #333; /* Dark text for contrast */
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #a1c4fd, #c2e9fb); /* Light blue gradient */
+}
+
+.login-card {
+  background-color: #fff; /* White background for the card */
+  padding: 40px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 480px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative;
+}
+
+.form-title {
+  font-size: 28px; /* Slightly smaller font size */
+  color: #1a5276; /* Dark blue color */
+  margin-bottom: 20px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.sub-title {
+  font-size: 16px;
+  color: #7f8c8d;
+  margin-bottom: 30px;
+  font-weight: 400;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  margin: 10px 0;
+  background: #ecf0f1; /* Light gray input background */
+  color: #2c3e50;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  border-color: #3498db; /* Blue border on focus */
+  background-color: #fff;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  background: #3498db; /* Light blue button */
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: #2980b9; /* Darker blue on hover */
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .login-card {
+    padding: 30px;
+    max-width: 420px;
+  }
+
+  .form-title {
+    font-size: 26px;
+  }
+
+  input {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  button {
+    padding: 12px;
+    font-size: 16px;
+  }
+}
+
+/* Dashboard Layout */
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 40px 30px;
+}
+
+.dashboard .banner {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.dashboard .banner:first-child {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  background: #d6eaf8; /* Light blue background */
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard .banner .firstBox {
+  flex: 2;
+  background: linear-gradient(135deg, #b3cde0, #dbe9f4); /* Soft gradient */
+  border-radius: 16px;
+  padding: 24px 32px;
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  color: #1f3a60; /* Deep blue text for readability */
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.dashboard .banner .firstBox img {
+  flex: 1;
+  height: auto;
+  max-height: 300px; /* or adjust as needed */
+  width: auto;
+  max-width: 100%;
+  object-fit: contain; /* This shows the entire image without cropping */
+  border-radius: 12px;
+}
+
+
+
+.dashboard .banner .firstBox .content {
+  flex: 2;
+}
+
+.dashboard .banner .firstBox .content h3 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.dashboard .banner .firstBox .content h1 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  color: #0a2c54;
+}
+.dashboard .banner .firstBox .content p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin: 0;
+}
+.dashboard .banner .firstBox .content h5 {
+  font-size: 1.1rem;
+  color: #122e51;
+}
+
+.dashboard .banner .secondBox,
+.dashboard .banner .thirdBox {
+  background: #d1e7f1; /* Light blue background */
+  color: #1a5276; /* Dark blue text */
+  border-radius: 20px;
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+}
+
+.dashboard .banner .secondBox h3,
+.dashboard .banner .thirdBox h3 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.dashboard .banner .secondBox p,
+.dashboard .banner .thirdBox p {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.dashboard .banner:last-child {
+  background: #fff;
+  color: #111;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard .banner:last-child h5 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.dashboard .banner table {
+  width: 100%;
+  color: #111;
+  font-size: 18px;
+}
+
+.dashboard .banner table th {
+  text-align: left;
+  padding: 12px;
+}
+
+.dashboard .banner table td {
+  padding: 12px;
+}
+
+.dashboard .banner table tbody tr:hover {
+  background: #f2f2f2;
+}
+
+/* General styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background: #f4f6f9;
+  color: #333;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #3498db; /* Light blue */
+  color: white;
+}
+
+.top-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white; /* White background */
+  padding: 14px 40px;
+  width: 100%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.top-navbar .brand {
+  font-size: 26px;
+  font-weight: bold;
+  color: black; /* Black font */
+  font-family: "Segoe Script", cursive;
+}
+
+.top-navbar .nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.top-navbar .nav-links button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: black; /* Black font */
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.top-navbar .nav-links button:hover {
+  color: #0a58ca;
+}
+
+.top-navbar .nav-links svg {
+  font-size: 20px;
+}
+
+
+
+
+/* Doctor Card Style */
+.doctors h1 {
+  color: #0a3d62; /* Deep blue for heading */
+  margin-bottom: 30px;
+  margin-top: 3%;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.doctors .banner {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 24px;
+  padding: 0 20px;
+}
+
+.doctors .banner .card {
+  background: linear-gradient(135deg, #b3cde0, #dbe9f4);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.doctors .banner .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.doctors .banner .card img {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 16px;
+  border: 4px solid #dbe9f4;
+  background-color: #f4f6f9;
+}
+
+.doctors .banner .card h4 {
+  font-size: 22px;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.doctors .banner .card div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 15px;
+  color: #333;
+}
+
+.doctors .banner .card div p {
+  font-weight: 600;
+  margin: 4px 0;
+}
+
+.doctors .banner .card div p span {
+  font-weight: 500;
+  color: #555;
+}
+
+@media (max-width: 350px) {
+  .doctors .banner {
+    grid-template-columns: 1fr;
+    padding: 0 10px;
+  }
+
+  .doctors .banner .card img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .doctors .banner .card h4 {
+    font-size: 20px;
+  }
+
+  .doctors .banner .card div {
+    font-size: 14px;
+  }
+}
+/* Page wrapper: centers content and adds a light background */
+.add-doctor-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: #f5f9fc; /* optional light background */
+  min-height: 85vh; /* ensure enough vertical space */
+}
+
+/* Title styling */
+.register-title {
+  text-align: center;
+  margin-top: 3%;
+  margin-bottom: 2%;
+  color: #1f4a74; /* theme color */
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/* Container that centers the form card */
+.add-doctor-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+/* The form is styled like a card: slightly off-white background, rounded corners, shadow */
+.add-doctor-container form {
+  background-color: #ffffff; /* Slightly off-white or pure white */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Styles for the file input container */
+.image-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+/* Optionally make the placeholder smaller */
+.image-wrapper img {
+  width: 150px;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+/* Base styling for the <input type="file"> */
+.image-wrapper input[type="file"] {
+  /* Hide the native text in some browsers */
+  font-size: 0; 
+  border: none;
+  cursor: pointer;
+}
+
+/* Chrome, Safari, Edge, Opera - file upload button */
+.image-wrapper input[type="file"]::-webkit-file-upload-button {
+  background-color: #1f4a74; /* Your theme color */
+  color: #fff;
+  padding: 0.8rem 1.2rem;
+  border-radius: 4px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Hover effect for WebKit browsers */
+.image-wrapper input[type="file"]:hover::-webkit-file-upload-button {
+  background-color: #163b5c;
+}
+
+/* Internet Explorer / Microsoft Edge (legacy) */
+.image-wrapper input[type="file"]::-ms-browse {
+  background-color: #1f4a74;
+  color: #fff;
+  padding: 0.8rem 1.2rem;
+  border-radius: 4px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Hover effect for IE/Edge (legacy) */
+.image-wrapper input[type="file"]:hover::-ms-browse {
+  background-color: #163b5c;
+}
+
+/* The area with the actual form fields in two columns */
+.file-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* two columns */
+  gap: 1rem;
+  width: 100%;
+}
+
+/* Inputs and selects get a soft blue background */
+.file-info input,
+.file-info select {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #dce6f0;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  background-color: #f7fbff; /* soft blue background */
+}
+
+/* Focus outline for better UX */
+.file-info input:focus,
+.file-info select:focus {
+  outline: none;
+  border-color: #1f4a74; /* match theme color */
+}
+
+/* Make the button span both columns and adjust color */
+.file-info button[type="submit"] {
+  grid-column: 1 / -1;
+  background-color: #1f4a74; /* theme color */
+  color: #fff;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+/* Button hover effect */
+.file-info button[type="submit"]:hover {
+  background-color: #163b5c;
+}
+
+/* Page wrapper: centers content and adds a light background */
+.add-admin-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: #f5f9fc; /* optional light background */
+  min-height: 85vh; /* ensure enough vertical space */
+}
+
+/* Title styling for the admin form */
+.admin-title {
+  text-align: center;
+  margin-top: 3%;
+  margin-bottom: 2%;
+  color: #1f4a74; /* theme color */
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/* Container that centers the admin form card */
+.add-admin-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+/* The admin form styled like a card: off-white background, rounded corners, shadow */
+.add-admin-container form {
+  background-color: #ffffff; /* white/off-white */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Each row (group) of fields */
+.add-admin-container form > div {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+/* Inputs and select fields styling */
+.add-admin-container form input,
+.add-admin-container form select {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #dce6f0;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  background-color: #f7fbff; /* soft blue background */
+}
+
+/* Focus styling for inputs and selects */
+.add-admin-container form input:focus,
+.add-admin-container form select:focus {
+  outline: none;
+  border-color: #1f4a74; /* theme color */
+}
+
+/* Styling for the submit button */
+.add-admin-container form button {
+  background-color: #1f4a74; /* theme color */
+  color: #fff;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  width: 100%;
+  max-width: 200px;
+  align-self: center;
+  margin-top: 1rem;
+}
+
+/* Hover effect for the submit button */
+.add-admin-container form button:hover {
+  background-color: #163b5c;
+}
+
+
+/* Page container for messages */
+.page.messages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: #f5f9fc; /* Light background */
+  min-height: 85vh;
+  padding: 2rem 1rem;
+}
+
+/* Title styling */
+.page.messages h1 {
+  color: #1f4a74; /* Theme color */
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Responsive grid for messages */
+.messages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 1rem;
+}
+
+/* Card styling for each message */
+.card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+/* Hover effect for cards */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Details styling within the card */
+.card .details p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Emphasize detail labels */
+.card .details p span {
+  font-weight: 600;
+  color: #1f4a74;
+}
